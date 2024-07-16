@@ -1,1 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            position: fixed;
+            width: 97%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            height: 3px;
+            width: 25px;
+            background: white;
+            margin: 4px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #333;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        .container {
+            padding: 80px 20px;
+        }
+
+        .section {
+            margin: 20px 0;
+        }
+
+        .section h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MyResume</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <div class="container">
+        <section id="home" class="section">
+            <h2>Home</h2>
+            <p>Welcome to my resume! Below you will find information about my education, skills, and experience.</p>
+        </section>
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>Marriotts Ridge High School</strong><br>
+                    High School Diploma<br>
+                    Graduation Date: May 2026
+                </li>
+            </ul>
+        </section>
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming Languages: JavaScript, Python, C++</li>
+                <li>Web Development: HTML, CSS, React</li>
+                <li>Database Management: MySQL, MongoDB</li>
+                <li>Version Control: Git, GitHub</li>
+            </ul>
+        </section>
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <ul>
+                <li>
+                    <strong>Employeee at Best Brains</strong><br>
+                    Executed professional work ethics and served the business needs. Created an engaging and comfortable environment for students. Assisted in teaching new topics. <br>
+                    February 2024 - Present
+                </li>
+                <li>
+                    <strong>Intern at Triwave Solutions</strong><br>
+                    Description of internship responsibilities and achievements<br>
+                    July 2024 - August 2024
+                </li>
+            </ul>
+        </section>
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Email: rahman.17229@gmail.com</p>
+            <p>Phone: (443) 379-1325</p>
+        
+        </section>
+    </div>
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
